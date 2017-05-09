@@ -1,5 +1,6 @@
+# adapted from http://distrustsimplicity.net/articles/mandelbrot-speed-comparison
 # on linux use nproc to get number of cores
-# julia -p 4 mandelbrot.jl
+# run julia -p 4 mandelbrot.jl
 
 using Images
 
@@ -79,14 +80,12 @@ end
 
 
 
-
+# compare execution time parallel, serial
 print("par:")
 @time mandelbrot(points, colors) 
 
 print("ser:")
 @time mandelbrot_ser(points2, colors2) 
-
-
 
 image = grayim(sdata(colors))
 
