@@ -1,6 +1,7 @@
 # adapted from http://distrustsimplicity.net/articles/mandelbrot-speed-comparison
 # on linux use nproc to get number of cores
 # run julia -p 4 mandelbrot.jl
+# tested on julia ver 0.4.7
 
 using Images
 
